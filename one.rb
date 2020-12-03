@@ -34,20 +34,12 @@ class ExpenseReport
 end
 
 
-def expenses
-    converted_expenses = []
-    f = File.readlines('./data_sets/one_data.rb')
-    f.each{ |line| converted_expenses << line.to_i}
-
-    return converted_expenses
-end
-
-expense_report = expenses
-challenge_1 = ExpenseReport.new(expense_report, 2)
+input = File.read('./data_sets/one_data.txt').split.map(&:to_i)
+challenge_1 = ExpenseReport.new(input, 2)
 challenge_1.calculate_expenses
 
-challenge_2 = ExpenseReport.new(expense_report, 3)
+challenge_2 = ExpenseReport.new(input, 3)
 challenge_2.calculate_expenses
 
-challenge_unavailiable = ExpenseReport.new(expense_report, 4)
+challenge_unavailiable = ExpenseReport.new(input, 4)
 challenge_unavailiable.calculate_expenses
