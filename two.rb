@@ -49,7 +49,7 @@ class ValidatePassword
 
 end
 
-input = input = File.readlines('./data_sets/two_data.txt')
+input = input = File.readlines('./data_sets/two.txt')
 
 challenge_1 = ValidatePassword.new(input, 1)
 challenge_1.validate_data

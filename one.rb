@@ -34,7 +34,7 @@ class ExpenseReport
 end
 
 
-input = File.read('./data_sets/one_data.txt').split.map(&:to_i)
+input = File.read('./data_sets/one.txt').split.map(&:to_i)
 challenge_1 = ExpenseReport.new(input, 2)
 challenge_1.calculate_expenses
 
